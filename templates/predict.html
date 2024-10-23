@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Data Form</title>
+</head>
+
+<body>
+    <h2> Employees Data for </h2>
+    <form action = "{{ url_for('predict_datapoint')}}" method="post">
+          <!-- Education -->
+          <label for="Education">Education:</label>
+          <select id="Education" name="Education">
+              <option value="Bachelors">Bachelors</option>
+              <option value="Masters">Masters</option>
+              <option value="PHD">PHD</option>
+          </select>
+          <br><br>
+  
+          <!-- Joining Year -->
+          <label for="JoiningYear">Joining Year:</label>
+          <input type="number" id="JoiningYear" name="JoiningYear" min="0" placeholder="Enter joining year">
+          <br><br>
+  
+          <!-- City -->
+          <label for="City">City:</label>
+          <select id="City" name="City">
+              <option value="Bangalore">Bangalore</option>
+              <option value="Pune">Pune</option>
+              <option value="New Delhi">New Delhi</option>
+          </select>
+          <br><br>
+  
+          <!-- Payment Tier -->
+          <label for="PaymentTier">Payment Tier:</label>
+          <select id="PaymentTier" name="PaymentTier">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+          </select>
+          <br><br>
+  
+          <!-- Age -->
+          <label for="Age">Age:</label>
+          <input type="number" id="Age" name="Age" min="18" max="100" placeholder="Enter your age">
+          <br><br>
+  
+          <!-- Gender -->
+          <label for="Gender">Gender:</label>
+          <select id="Gender" name="Gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+          </select>
+          <br><br>
+  
+          <!-- Ever Benched -->
+          <label for="EverBenched">Ever Benched:</label>
+          <select id="EverBenched" name="EverBenched">
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+          </select>
+          <br><br>
+  
+          <!-- Experience In Current Domain -->
+          <label for="ExperienceInCurrentDomain">Experience in Current Domain (Years):</label>
+          <input type="number" id="ExperienceInCurrentDomain" name="ExperienceInCurrentDomain" min="0" max="50" placeholder="Enter years of experience">
+          <br><br>
+  
+          <!-- Submit Button -->
+          <input type="submit" value="Submit">
+  
+      </form>
+    <p>the predictions is {{results}}</p>
+    <br>
+    <p>0 era que no dejaba la compañia</p> 
+    <br>
+    <p>1 era que dejaba la compañia</p>
+</body>
+
+    </html>

@@ -1,0 +1,10 @@
+scikit-learn==1.5.0
+pandas
+numpy
+seaborn
+pyodbc
+sqlalchemy==2.0.6
+xgboost
+dill
+flask
+-e .
